@@ -22,47 +22,47 @@
 
 Cài đặt các thư viện cần thiết cho bài lab:
 
-*pip3 install numpy*
-
-*pip3 install scipy*
+     pip3 install numpy
+     
+     pip3 install scipy
 
 Cài đặt công cụ ffmpeg để phá hoại tín hiệu giấu tin trong file âm thanh:
 
-*sudo apt update*
-
-*sudo apt install ffmpeg*
+     sudo apt update
+     
+     sudo apt install ffmpeg
 
 Thực hiện tách tin từ file âm thanh *sound\_stego.wav,* từ đó xem được nội dung thông điệp:
 
-*python3 echo\_extract.py sound\_stego.wav*
+     python3 echo\_extract.py sound\_stego.wav
 
 Sử dụng công cụ ffmpeg thêm tiếng ồn trắng vào tệp âm thanh làm sai lệch nội dung tin:
 
-*ffmpeg \-i sound\_stego.wav \-filter\_complex "sine=frequency=1000:duration=2" output\_with\_noise.wav*
+     ffmpeg \-i sound\_stego.wav \-filter\_complex "sine=frequency=1000:duration=2" output\_with\_noise.wav
 
 Thực hiện tách tin từ file âm thanh đã thêm tiếng ồn và kiểm tra tin thu được:
 
-*python3 echo\_extract.py output\_with\_noise.wav*
+     python3 echo\_extract.py output\_with\_noise.wav
 
 Sử dụng công cụ ffmpeg thay đổi sample rate của tệp âm thanh, điều này có thể dẫn đến giảm chất lượng âm thanh:
 
-*ffmpeg \-i sound\_stego.wav \-ar 22050 output.wav*
+     ffmpeg \-i sound\_stego.wav \-ar 22050 output.wav
 
 Thực hiện tách tin từ file âm thanh đã thay đổi sample rate và kiểm tra tin thu được:
 
-*python3 echo\_extract.py output.wav*
+     python3 echo\_extract.py output.wav
 
 Trên terminal đầu tiên:
 
 * Kiểm tra kết quả bài lab:
 
-*checkwork*
+      checkwork
 
 * Kết thúc bài lab:
 
-*stoplab*
+      stoplab
 
 * Khởi động lại bài lab:
 
-*labtainer \-r echo-atwith-ffmpeg*
+      labtainer \-r echo-atwith-ffmpeg
 
